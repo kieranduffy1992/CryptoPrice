@@ -7,7 +7,23 @@ html
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
+      .container
+        a.navbar-brand(href='/') 
+          span.color C
+          | ryptoPrice 
+    .container
+      .row.banner
+        .col-12
+          h1 
+            span.color C
+            | ryptoPrice
+          p Latest prices for all your favourite coins
+      block content
+      footer
+        .row
+          .col-12
+            small &copy; CryptoPrice2021
     script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
     script(src='/javascripts/bootstrap.min.js')

@@ -1,14 +1,14 @@
 {
-  "name": "loc8r",
+  "name": "CryptoPrice",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
-  "engines":{
-  "node":"^14.17.6",
-  "npm":"^6.14.15"},
-
+  "engines": {
+    "node": "^14.17.6",
+    "npm": "^6.14.15"
+  },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "cookie-parser": "~1.4.4",
@@ -17,6 +17,7 @@
     "font-awesome": "^4.7.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.13",
     "pug": "2.0.0-beta11"
   }
 }

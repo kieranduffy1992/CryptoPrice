@@ -1,37 +1,72 @@
-@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800');
 
 body {
-  font-family: "Cabin", Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #ffffff;
-  background-color: #108a93;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster', cursive;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,11,95,1) 49%, rgba(5,5,96,1) 100%);
 }
 
 .navbar {
-  background-color: #ad1d28;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,11,95,1) 49%, rgba(5,5,96,1) 100%);
   border-color: #911821;
 }
 
-.navbar-brand {
-  font-family: 'Lobster', cursive;
-}
 
 .banner {
   margin-top: 4em;
-  border-bottom: 1px solid #469ea8;
+  border-bottom: 1px solid white;
   margin-bottom: 1.5em;
   padding-bottom: 0.5em;
+  text-align:center; 
+  color:white;
 }
 
-h1 small {
-  color: #aaa;
+.main{
+	margin:35px auto 0 auto;
 }
 
 .card {
-  background-color: #469ea8;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,11,95,1) 49%, rgba(5,5,96,1) 100%);
+  border:solid white 1px;
+}
+
+
+.form{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-items:center;
+}
+
+.form h2 {
+	text-align:center;
+	padding-top:10px;
+	color:white;
+}
+
+a{
+	color:white;
+	
+}
+
+.form a{
+	text-decoration:underline;
+	margin-top:10px;
+}
+
+.btn{
+	background-color:#FF33F2;
+	color:white;
+	margin-bottom:5px;
+	cursor:pointer;
+	
+}
+
+.btn:hover{
+	opacity:0.7;
 }
 
 .card-primary {
@@ -52,29 +87,82 @@ h1 small {
   margin-bottom: 1em;
 }
 
-.badge-default, .btn-primary {
-  background-color: #ad1d28;
-  border-color: #911821;
+a:hover {
+  color: #FF33F2;
 }
 
-h4 a, h4 a:hover {
-  color: #fff;
+.color{
+	color:#FF33F2
 }
 
-h4 small {
-  font-size: 60%;
-  line-height: 200%;
-  color: #aaa;
+
+/*data page*/
+
+.card-box {
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,11,95,1) 49%, rgba(5,5,96,1) 100%);
+    min-height: 300px;
+    position: relative;
+    padding: 30px 30px 20px;
+    margin-bottom: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+	border: 1px solid white;
+            
 }
 
-.address {
-  margin-bottom: 0.5rem;
+.card-box:after{
+	display: block;
+	background: #2196F3;
+	content: '';
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
 }
 
-.facilities span.badge {
-  margin-right:2px;
+.card-title h2 {
+	margin: 0;
+	text-align:center;
+	padding-top: 10%;
+	color: #2196F3;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 15px;
 }
 
-legend {
-  font-family: 'Lobster', cursive;
+.card-title p {
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.card-link a {
+	text-decoration: none;
+	font-family: 'Oswald', sans-serif;
+	color: #FF5722;
+	font-size: 15px;
+}
+
+.fa-bitcoin{
+	color:gold;
+	text-align:center;
+}
+
+.fa-xing{
+	color:#2CA1B2 ;
+	text-align:center;
+}
+
+.fa-etsy{
+	color:#7D8D90;
 }
