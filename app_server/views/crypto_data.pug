@@ -3,60 +3,15 @@ extends layout
 block content
   .container
   .row
+   each crypto in Cryptos
     .col-md-3
       .card-box
         .card-title
-          i.fa.fa-bitcoin.fa-5x
-          h2 Bitcoin
+          h2=crypto.name
           div(style='display: flex;')
-            p Price:&nbsp;&nbsp;
-            p $60,586
+            p=card.price+crypto.price           
           div(style='display: flex;')
-            p Volume:&nbsp;&nbsp;
-            p $43,241,820
+            p=card.volume+crypto.volume
           div(style='display: flex;')
-            p Volume/Marketcap:&nbsp;&nbsp;
-            p 0.037
+            p=card.volMarket+crypto.marketcap
           div(style='display: flex;')           
-    .col-md-3
-      .card-box
-        .card-title
-          i.fa.fa-etsy.fa-5x
-          h2 Ethereum
-          div(style='display: flex;')
-            p Price:&nbsp;&nbsp;
-            p $60,586
-          div(style='display: flex;')
-            p Volume:&nbsp;&nbsp;
-            p $43,241,820
-          div(style='display: flex;')
-            p Volume/Marketcap:&nbsp;&nbsp;
-            p 0.037
-    .col-md-3
-      .card-box
-        .card-title
-          i.fa.fa-codiepie.fa-5x
-          h2 Cardano
-          div(style='display: flex;')
-            p Price:&nbsp;&nbsp;
-            p $60,586
-          div(style='display: flex;')
-            p Volume:&nbsp;&nbsp;
-            p $43,241,820
-          div(style='display: flex;')
-            p Volume/Marketcap:&nbsp;&nbsp;
-            p 0.037 
-    .col-md-3
-      .card-box
-        .card-title
-          i.fa.fa-xing.fa-5x
-          h2 XRP
-          div(style='display: flex;')
-            p Price:&nbsp;&nbsp;
-            p $60,586
-          div(style='display: flex;')
-            p Volume:&nbsp;&nbsp;
-            p $43,241,820
-          div(style='display: flex;')
-            p Volume/Marketcap:&nbsp;&nbsp;
-            p 0.037    

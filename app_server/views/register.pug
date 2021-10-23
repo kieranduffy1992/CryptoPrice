@@ -4,18 +4,18 @@ block content
   .main.col-12.col-md-10.col-lg-6.col-sm-10
     .card
       form.form(action='#')
-        h2 Welcome to Crypto Price
-        p Register account below
+        h2=header.title 
+        p=header.tagLine 
         .form-group
-          label(for='email') Email address:
+          label(for='email')=registerForm.email
           input#email.form-control(type='email')
         .form-group
-          label(for='Firstname') First Name:
+          label(for='Firstname')=registerForm.firstname
           input#firstname.form-control(type='email')
         .form-group
-          label(for='surname') Surname:
+          label(for='surname')=registerForm.surname
           input#surname.form-control(type='email')        
         .form-group
-          label(for='pwd') Password:
+          label(for='pwd')=registerForm.password
           input#pwd.form-control(type='password')
-        button.btn.btn-light.btn-lg(type='submit') Register
+        button.btn.btn-light.btn-lg(type='submit')=registerForm.button
