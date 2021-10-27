@@ -32,3 +32,5 @@ const cryptopage = function(req, res){
 module.exports = { 
 cryptopage 
 };
+
+
