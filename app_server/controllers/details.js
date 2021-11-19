@@ -1,5 +1,25 @@
-/* GET details page */
-const cryptopage = function(req, res){ 
+const request = require('request');
+
+const apiOptions = {
+  server: 'http://localhost:3000',
+};
+if (process.env.NODE_ENV === 'production') {
+  apiOptions.server = 'https://cryptoprice2021.herokuapp.com';
+}
+
+const cryptolist = function (req, res) {
+  const path = '/api/Cryptos';
+  const requestOptions = {
+    url: apiOptions.server + path,
+    method: 'GET',
+    json: {},
+  };
+  request(requestOptions, (err, response, body) => {
+    cryptopage(req, res, body);
+  });
+};
+
+const cryptopage = function(req, res, responseBody){ 
 	res.render('crypto_data', { 
 		title: 'Crypto Details',
 		card: { 
@@ -7,30 +27,11 @@ const cryptopage = function(req, res){
 			volume: 'Volume: ',
 			volMarket: 'Vol/Marketcap: '
 				},
-		Cryptos: [{
-			name: 'Bitcoin',
-			price: '60,586',
-			volume: '43,241,820',
-			marketcap: '0.037'},
-		    
-			{name: 'Ethereum',
-			price: '3,586',
-			volume: '22,671,110',
-			marketcap: '0.011'},
-			
-			{name: 'Cardano',
-			price: '3.41',
-			volume: '3,211,413',
-			marketcap: '0.008'},
-			
-			{name: 'XRP',
-			price: '1.96',
-			volume: '1,241,820',
-			marketcap: '0.001'}]	
+		Cryptos: responseBody,	
 	}); 
 };
 module.exports = { 
-cryptopage 
+cryptolist
 };
 
 

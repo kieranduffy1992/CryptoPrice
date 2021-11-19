@@ -4,12 +4,12 @@ const router = express.Router();
 const ctrlSignin = require('../controllers/sign_in'); 
 const ctrlDetails = require('../controllers/details');
  
-/* Locations pages */
+/* signin pages */
 router.get('/', ctrlSignin.signinpage);
 router.get('/register', ctrlSignin.registrationpage);
 
-/* details pages */
-router.get('/cryptopage', ctrlDetails.cryptopage);
+/* details page */
+router.get('/cryptopage', ctrlDetails.cryptolist);
 module.exports = router;
 
 
