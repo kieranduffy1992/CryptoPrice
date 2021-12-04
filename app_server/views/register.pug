@@ -1,21 +1,10 @@
 extends layout
 
+
 block content
-  .main.col-12.col-md-10.col-lg-6.col-sm-10
-    .card
-      form.form(action='#')
-        h2=header.title 
-        p=header.tagLine 
-        .form-group
-          label(for='email')=registerForm.email
-          input#email.form-control(type='email')
-        .form-group
-          label(for='Firstname')=registerForm.firstname
-          input#firstname.form-control(type='email')
-        .form-group
-          label(for='surname')=registerForm.surname
-          input#surname.form-control(type='email')        
-        .form-group
-          label(for='pwd')=registerForm.password
-          input#pwd.form-control(type='password')
-        button.btn.btn-light.btn-lg(type='submit')=registerForm.button
+  app-crypto-list Loading
+    
+block scripts
+ script(src='/build/runtime.dc7ab6c8e77091aa.js')
+ script(src='/build/polyfills.3abaa8b1c0ddbf6b.js')
+ script(src='/build/main.765542c97cfd0068.js')      
